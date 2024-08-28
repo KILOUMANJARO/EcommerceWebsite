@@ -8,7 +8,7 @@
 
   export const Navbar = () => {
 
-    const [menu, setMenu] = useState("shop");
+    const [menu, setMenu] = useState("home");
     
     const {getTotalCartItems}= useContext(ShopContext);
 
@@ -18,10 +18,10 @@
 
 
         <ul className="nav-menu">
-          <li onClick={()=>{setMenu("shop")}}><Link style={{ textDecoration: 'none',  color: 'black', textAlign: 'left' }} to='/'>Shop</Link>{menu==="shop"?<hr/>:<></>}</li>
-          <li onClick={()=>{setMenu("mens")}}><Link style={{ textDecoration: 'none', color: 'black', textAlign: 'left' }} to='/mens'>Men</Link>{menu==="mens"?<hr/>:<></>}</li>
-          <li onClick={()=>{setMenu("womens")}}><Link style={{ textDecoration: 'none', color: 'black', textAlign: 'left' }} to='/womens'>Women</Link>{menu==="womens"?<hr/>:<></>}</li>
-          <li onClick={()=>{setMenu("kids")}}><Link style={{ textDecoration: 'none', color: 'black', textAlign: 'left' }} to='/kids'>Kids</Link>{menu==="kids"?<hr/>:<></>}</li>
+          <li onClick={()=>{setMenu("home")}}><Link style={{ textDecoration: 'none',  color: 'black', textAlign: 'left' }} to='/'>Home</Link>{menu==="home"?<hr/>:<></>}</li>
+          <li onClick={()=>{setMenu("shop")}}><Link style={{ textDecoration: 'none', color: 'black', textAlign: 'left' }} to='/shop'>Shop</Link>{menu==="shop"?<hr/>:<></>}</li>
+          <li onClick={()=>{setMenu("contact")}}><Link style={{ textDecoration: 'none', color: 'black', textAlign: 'left' }} to='/contact'>Contact</Link>{menu==="contact"?<hr/>:<></>}</li>
+          <li onClick={()=>{setMenu("about")}}><Link style={{ textDecoration: 'none', color: 'black', textAlign: 'left' }} to='/about'>About</Link>{menu==="about"?<hr/>:<></>}</li>
         </ul>
 
         <div ClassName="nav-logo">

@@ -1,18 +1,35 @@
-import React from 'react'
-import { Hero } from '../Components/Hero/Hero'
-import { Popular } from '../Components/Popular/Popular'
-import { Offers } from '../Components/Offers/Offers'
-import { NewCollections } from '../Components/NewCollections/NewCollections'
-import { NewsLetter } from '../Components/NewsLetter/NewsLetter'
+import React, { useContext } from 'react'
+import './CSS/Shop.css'
+import { ShopContext } from '../Context/ShopContext';
+import dropdown_icon from '../Components/Assets/dropdown_icon.png'
+import { Item } from '../Components/Item/Item'
 
-export const Shop = () => {
+export const Shop = (props) => {
+  const {all_product} = useContext(ShopContext);
   return (
-    <div>
-      <Hero/>
-      <Popular/>
-      <Offers/>
-      <NewCollections/>
-      <NewsLetter/>
+    <div className='shop-category'>
+      <img className='shop-banner' src={props.banner} alt="" />
+      <div className="shop-indexSort">
+        <p>
+          <span>Showing 1-12</span> out of 36 products
+        </p>
+        <div className="shop-sort">
+          Sort by <img src={dropdown_icon} alt="" />
+        </div>
+      </div>
+      <div className="shop-products">
+        {all_product.map((item,i)=>{
+          if (props.category===item.category){
+            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
+          }
+          else{
+            return null;
+          }
+        })}
+      </div>
+      <div className="shop-loadmore">
+        Explore More
+      </div>
     </div>
   )
 }

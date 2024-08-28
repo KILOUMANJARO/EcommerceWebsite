@@ -18,7 +18,7 @@ export const Hero = () => {
             </div>
 
             <div className="hero-latest-btn">
-                <div>SHOP</div>
+                <div>SHOP NOW</div>
                 {/* <img src={arrow_icon} alt="" width="30"/> */}
             </div>,
  
