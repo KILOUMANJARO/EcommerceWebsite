@@ -1,0 +1,115 @@
+        .container {
+            height: 65vh;
+            margin-top: 40px;
+            background: linear-gradient(180deg, pink, gray 60%);
+            display: flex;
+            align-items: center; 
+            flex-direction: column; /* Ensure children are stacked vertically */
+            padding-left: 20px;
+        }
+
+        .contactBorder {
+            display: flex;
+            align-items: center; 
+            border: 2px solid red;
+            height: 100%;
+        }
+
+        .contact {
+            text-align: center;
+            width: 60vw;
+            height: 80%;
+            margin: auto;
+            position: relative; /* Add this to make .buttons relative to .contact */
+        }
+
+        label {
+            flex-grow: 1;
+            text-align: left; /* Align the label to the left */
+        }
+
+
+        .email, .subject {
+            display: flex;
+            align-items: center; 
+            width: 85%;
+            height: 40px; 
+            margin: auto;
+            border: 1px solid black;
+            margin-bottom: 10px; /* Add spacing between inputs */
+        }
+
+        .message {
+            display: flex;
+            width: 85%;
+            height: 40px; 
+            margin: auto;
+            border: 1px solid black;
+            margin-bottom: 10px; /* Add spacing between inputs */
+        }
+
+
+
+        .styled-textbox {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
+        }
+
+        .long-textbox {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
+        }
+
+        .styled-textbox:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+
+
+        .buttons {
+            display: flex;
+            justify-content: space-between; 
+            width: 65%;
+            height: 55px; 
+            border: 2px solid black;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* Center the button horizontally */
+        }
+
+        .custom-button {
+            height: 100%;
+            width: 48%;
+            background-color: #4CAF50; /* Green background */
+            color: white;              /* White text */
+            padding: 10px 20px;        /* Padding inside the button */
+            border: none;              /* No border */
+            border-radius: 5px;        /* Rounded corners */
+            cursor: pointer;           /* Pointer/hand icon on hover */
+            font-size: 16px;           /* Font size */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+        
+        /* Change background color on hover */
+        .custom-button:hover {
+            background-color: #45a049;
+        }
+        
+        /* Add a shadow when button is clicked (active state) */
+        .custom-button:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }

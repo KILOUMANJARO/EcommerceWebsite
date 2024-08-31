@@ -12,14 +12,14 @@ export const Hero = () => {
             <div>
                 <div className="hand-hand-icon">
                     <p>Kids</p>
-                    {/* <img src={hand_icon} alt="" width="50"/> */}
+                    {<img src={hand_icon} alt="" width="50"/>}
                 </div>
                 <p>Don't Play</p>
             </div>
 
             <div className="hero-latest-btn">
                 <div>SHOP NOW</div>
-                {/* <img src={arrow_icon} alt="" width="30"/> */}
+                {<img src={arrow_icon} alt="" width="30"/>}
             </div>,
  
         </div>
