@@ -17,24 +17,38 @@ export const SideCart = () => {
                     </div>
                     
                 </div>
-
+                <hr></hr>
                 {all_product.map((e)=>{
                     if(cartItems[e.id]>0){
-                        return  <div>
-                        <div className='cartitems-format cartitems-format-main'>
-                            <img src={e.image} alt="" className='carticon-product-icon' />
-                            <p>{e.name}</p>
-                            <p>${e.new_price}</p>
-                            <button className='cartitems-quantity'>{cartItems[e.id]}</button>
-                            <p>${e.new_price*cartItems[e.id]}</p>
-                            <img className='cartitems-remove-icon' src={remove_icon} onClick={()=>{removeFromCart(e.id)}} alt="" />
+                        return  <div className='cartitems-container'>
+                                
+                        <div className='cartitems-main'>
+                            <div className="cartitems-left">
+                                <img src={e.image} alt="" className='cartitem-icon' />
+                            </div>
+
+                            <div className="cartitems-right">
+                                <div className="details-left">
+                                    <p className='product'>{e.name}</p>
+                                    <div className="size-quantity">
+                                        <p className='size'> Size: S </p>
+                                        <p className='quantity'>
+                                            Quantity: <button className='cartitems-count'>{cartItems[e.id]}</button>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="details-right">
+                                    <p className='price'>${e.new_price}</p>
+                                    <p className='remove' onClick={()=>{removeFromCart(e.id)}} alt="">Remove</p>
+                                </div>
+                                
+                            </div>
+     
                         </div>
-                        <hr/>
                     </div>    
                     }
                     return null;
                 })}
-                <hr/>
             </div>
 
             <div className="actions">
