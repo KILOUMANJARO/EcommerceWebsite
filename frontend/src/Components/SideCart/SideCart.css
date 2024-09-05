@@ -6,7 +6,14 @@
     width: 400px;
     background-color: white;
     border: 2px solid black;
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease;
 }
+  
+  .sidecart.open {
+    transform: translateX(0); /* Slide in when open */
+  }
+  
 
 .content {
     height: 100%;
@@ -223,3 +230,14 @@
     border: 1px solid black; /* Make sure it has a visible border */
     margin-top: 5px; /* Add some margin if necessary */
 }
+
+.close-button {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
